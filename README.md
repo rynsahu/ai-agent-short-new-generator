@@ -4,9 +4,8 @@ This project implements an AI agent using LangGraph.js with support for both loc
 
 ## Prerequisites
 
-- Node.js (v16 or higher)
+- Node.js (v18 or higher)
 - Ollama installed locally (for development)
-- Deepseek API key (for production)
 
 ## Setup
 
@@ -18,28 +17,32 @@ This project implements an AI agent using LangGraph.js with support for both loc
 3. Copy the `.env.example` to `.env` and configure your environment variables:
    ```
    ENVIRONMENT=development # or production
-   OLLAMA_BASE_URL=http://localhost:11434
+   OLLAMA_BASE_URL=http://127.0.0.1:11434
    DEEPSEEK_API_KEY=your_api_key_here
+   MODEL_NAME='llama3.2'
    ```
 
 4. For local development:
    - Make sure Ollama is running
    - Pull the deepseek model:
      ```bash
-     ollama pull deepseek-r1:7b
+     ollama pull llama3.2
      ```
 
 ## Development
 
-1. Build the project:
+1. Run dev envirment:
    ```bash
-   npm run build
+   npm run dev
    ```
 
-2. Run the example:
+2. Node server will start:
    ```bash
-   npm start
+   http://localhost:11333
    ```
+
+## How to use AI Agent
+`http://localhost:11333/news?article=<page the article here>`
 
 ## Project Structure
 
