@@ -1,4 +1,4 @@
-# AI Agent with LangGraph.js and Deepseek
+# AI Agent to generator 60 words short news from an article
 
 This project implements an AI agent using LangGraph.js with support for both local development using Ollama (with deepseek-r1:7b model) and production deployment using the Deepseek API.
 
